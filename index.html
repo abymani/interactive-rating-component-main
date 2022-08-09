@@ -16,10 +16,10 @@
 
 </head>
 <body>
-  <div class="main_container">
+
   <!-- Rating state start -->
-    <div class="rating_card">
-      <img src="./images/icon-star.svg" height="auto" width="auto">
+    <div class="rating_card" id="rat_card">
+      <img id="icon_star" src="./images/icon-star.svg" height="auto" width="auto">
       <h1>How did we do?</h1>
 
       <p>Please let us know how we did with your support request. All feedback is appreciated
@@ -32,10 +32,25 @@
         <button class="rate">4 </button>
         <button class="rate">5 </button>
       </div>
-      <button class="submit">Submit</button>
+      <button id="submit" onclick="handleSubmit()">Submit</button>
     </div>
+
+  <div class="thanks_card" id="tha_card">
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div><img id="illustration" src="./images/illustration-thank-you.svg" height="auto" width="auto"></div>
+    <div><p id="score">You selected <!-- Add rating here --> out of 5 </p></div>
+
+    <div><h1>Thank you!</h1></div>
+
+    <div><p id="desc">We appreciate you taking the time to give a rating. If you ever need more support,
+    don’t hesitate to get in touch!</p></div>
+
+    <!-- Thank you state end -->
+
   </div>
 
-
+<script src="./index.js"></script>
 </body>
 </html>
