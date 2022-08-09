@@ -3,7 +3,7 @@ const thanks_card=document.getElementById('tha_card');
 
 
 
- let score;
+ let score=0;
  function handleRating(sc) {
    score =sc;
    for(let i=1;i<6;i++){
@@ -15,7 +15,12 @@ const thanks_card=document.getElementById('tha_card');
  }
 
  function handleSubmit() {
+   if(score ===0){
+     return
+   }
+   else{
   rating_card.style.display= "none";
   thanks_card.style.display="flex";
   document.getElementById('score').innerHTML ="You selected "+score+ " out of 5";
+}
 }
